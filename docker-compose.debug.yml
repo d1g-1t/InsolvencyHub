@@ -1,0 +1,9 @@
+# Override: публикует Postgres/Redis на localhost для отладки.
+# Использование: docker compose -f docker-compose.yml -f docker-compose.debug.yml up -d
+services:
+  postgres:
+    ports:
+      - "127.0.0.1:${POSTGRES_HOST_PORT:-20501}:5432"
+  redis:
+    ports:
+      - "127.0.0.1:${REDIS_HOST_PORT:-20502}:6379"
