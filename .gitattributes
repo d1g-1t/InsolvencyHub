@@ -1,0 +1,2 @@
+# Exclude build tooling from GitHub language statistics
+Makefile linguist-detectable=false
